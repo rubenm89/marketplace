@@ -1,0 +1,53 @@
+.logo{
+    width: 11%;
+}
+.buscador{
+    text-align: end;
+    margin-top: -41px;
+}
+.banner{
+    width: 100%;
+    height: 580px;
+}
+.grid-layout{
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.one {
+    grid-column: auto;
+    grid-row: auto;
+
+}
+.imagen-note{
+    border-radius: 20%;
+    border-width: 10px;
+    border-color: black;
+    border-style: solid;
+    width: 200px;
+    height: 200px;
+}
+.imagen-prod{
+    border-radius: 20%;
+    border-width: 10px;
+    border-color: black;
+    border-style: solid;
+}
+.organizacion-prod{
+    display: grid;
+    grid-template-columns: 70% auto;
+    grid-gap: 30px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.necesitas-vender{
+    font: size 900px;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+}
+body{
+    background-color: blanchedalmond;
+}
+
+
