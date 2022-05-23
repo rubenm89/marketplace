@@ -17,8 +17,15 @@
     grid-auto-rows: minmax(100px, auto);
 }
 .one {
-    grid-column: auto;
+    grid-column: 30% 30%;
     grid-row: auto;
+    grid-template-columns: auto;
+
+}
+.descrip{
+   
+    grid-column: 10% 30%;
+    grid-row: 50% 30%;
 
 }
 .imagen-note{
@@ -26,20 +33,24 @@
     border-width: 10px;
     border-color: black;
     border-style: solid;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
 }
 .imagen-prod{
     border-radius: 20%;
     border-width: 10px;
     border-color: black;
     border-style: solid;
+    width: auto;
+    height: auto;
 }
 .organizacion-prod{
     display: grid;
     grid-template-columns: 70% auto;
     grid-gap: 30px;
-    grid-auto-rows: minmax(100px, auto);
+    /*grid-auto-rows: minmax(100px, auto);*/
+    grid-column: 1 / 2;
+    
 }
 .necesitas-vender{
     font: size 900px;

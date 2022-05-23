@@ -3,10 +3,13 @@
 
 <head>
     <title>VENTA ONLINE</title>
+    <script src="https://unpkg.com/vue@3"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="javascript/indexscript.js"></script>
+    
 </head>
 
-<body class="body">
+<body id="app" class="body">
     <header>
         <nav>
             <div>
@@ -23,17 +26,29 @@
                         href="#">Ayuda </a>
                 </div>
             </div>
-
         </nav>
     </header>
     <main>
-
-        <h1></h1>
-
         <hr>
         <div>
             <img src="portada.jpeg" class="banner" alt="portada">
         </div>
+
+        <div >
+            <div id="cantidad-productos">
+            <div v-for="producto in productos">
+                {{producto.title}} <br>
+                {{producto.description}} <br>
+                {{producto.price}}<br>
+                <a :href=producto.factory_url>Sitio del fabricante</a><br>             
+                <img :src=producto.image_url alt ="IMAGEN DE NOTEBOOK">                               
+            </div>
+        </div>
+
+        <script>
+            const mountedApp = app.mount('#app')
+        </script>
+               
         <hr>
         <h3>Productos que pueden interesarte...</h3>
         <div class="grid-layout" >

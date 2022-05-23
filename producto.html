@@ -4,7 +4,11 @@
         <title>
             articulo 
         </title>
+        <script src="https://unpkg.com/vue@3"></script>
         <link rel="stylesheet" href="style.css">
+        <script src="javascript/producto.js"></script>
+
+    </head>
         <body>
             <header>
                 <nav>
@@ -28,41 +32,37 @@
             <main>
 
                 <a href="index.html"> Volver a la pagina principal</a>
-               <div class="organizacion-prod">
-                    <div class="one" ;>
-                        <img src="notebook.jpg" class="imagen-prod" alt="notebook" style="float: right;">                 
-                    </div>
 
-                    <div class="one";>
-                       <p>
-                        <strong>NOTEBOOK LENOVO IDEAPAD 3 8/128GB 15.6”</strong> 
-                       </p>
-                       <p>
-                          $72.000 <br>
-                          10 cuotas $7.200 <strong> sin interes</strong>
-                       </p>
-                       <a href="gracias.html"><button type="submit">Comprar</button></a>
-                       <p>
-                           <a href="#">ver medios de pago</a> 
-                       </p>
-                   </div>                   
-               </div>
+                <div id="app">
+                    <div class="organizacion-prod">
+                        <div class="descrip" >
+                            <!-- <img id="imagen-producto" class="imagen-prod" alt="notebook" style="float: right;">--> 
+                            <img v-bind:src="image_url">                
+                        </div>
+    
+                        <div class="descrip">
+                           <p>{{title}}</p><br>
+                           <p>{{description}}</p> <br>
+                           <p>{{price}}</p> <br>              
+                           <!--<p id="titulo-producto" > <br>
+                           <p id="descripcion-producto"><br>          
+                           <p id="precio-producto"><br>--> 
+                           <a href="gracias.html"><button type="submit">Comprar</button></a>
+                           <p>
+                               <a href="#">ver medios de pago</a> 
+                           </p>
+                       </div>
+                    </div>                   
+    
+                    <a  id ="link-producto" target="_blank" rel="noopener noreferrer":href= "factory_url" >Sitio del fabricante </a>
+
+                </div>
+
+                <!-- Mount App -->
+                <script>
+                  const mountedApp = app.mount('#app')
+                </script>
                
-
-                <a href="https://www.lenovo.com" target="_blank" rel="noopener noreferrer">www.lenovo.com</a>
-                <p>
-                    Lo que tenés que saber de este producto
-                </p>
-                <ul>
-                    <li>Procesador AMD A4-Series.</li>
-                    <li>Memoria RAM de 4GB.</li>
-                    <li>Pantalla LED de 14".</li>
-                    <li>Resolución de 1366x768 px.</li>
-                    <li>Placa de video AMD Radeon R3.</li>
-                    <li>Conexión wifi y bluetooth.</li>
-                    <li>Cuenta con 2 puertos USB y puerto HDMI.</li>
-                    <li>Incluye lector de tarjeta de memoria.</li>
-                </ul>
                 <a href="#">Comentarios</a> <br>
                 <hr>
 
@@ -76,5 +76,5 @@
                 </p>
             </main>
         </body>
-    </head>
+
 </html>
