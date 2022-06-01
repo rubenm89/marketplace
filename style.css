@@ -27,6 +27,7 @@
     grid-column: 10% 30%;
     grid-row: 50% 30%;
 
+
 }
 .imagen-note{
     border-radius: 20%;
@@ -46,7 +47,7 @@
 }
 .organizacion-prod{
     display: grid;
-    grid-template-columns: 70% auto;
+    grid-template-columns: 15% 60% auto;
     grid-gap: 30px;
     /*grid-auto-rows: minmax(100px, auto);*/
     grid-column: 1 / 2;
@@ -60,5 +61,19 @@
 body{
     background-color: blanchedalmond;
 }
+.cart {
+    margin: 20px 30px;
+    float: right;
+    border: 1px solid #d8d8d8;
+    padding: 10px 30px;
+    background-color: white;
+    -webkit-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
+    box-shadow: 2px 15px -12px rgba(0, 0, 0, 0.57);
+  }
+  .foto{
+    max-width: 100%;
+    max-height: 100%;
+  }
 
 

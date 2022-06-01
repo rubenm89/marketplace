@@ -34,20 +34,37 @@
                 <a href="index.html"> Volver a la pagina principal</a>
 
                 <div id="app">
+                    <div class="cart"> Carrito({{ cart }}) 
+                        <ul>
+                            <li v-for="notebookComprada in notebooksCompradas"> {{notebookComprada.nombre}}: ${{notebookComprada.precio}}</li>
+                            
+                        </ul>
+                    </div>
+
                     <div class="organizacion-prod">
                         <div class="descrip" >
-                            <!-- <img id="imagen-producto" class="imagen-prod" alt="notebook" style="float: right;">--> 
-                            <img v-bind:src="image_url">                
+                            <img v-for="urlImage in images_url" :src="urlImage"  @mouseover="cambiarImagen(urlImage)" style="max-width: 100%; max-height: 100%">
                         </div>
+                        
+                        <div class="descrip" >
+                            <!-- <img id="imagen-producto" class="imagen-prod" alt="notebook" style="float: right;">--> 
+                            <img class="foto" v-bind:src="image_url">                                           
+                        </div>
+                        
     
                         <div class="descrip">
                            <p>{{title}}</p><br>
                            <p>{{description}}</p> <br>
-                           <p>{{price}}</p> <br>              
+                           <p>${{price}}</p> <br>              
                            <!--<p id="titulo-producto" > <br>
                            <p id="descripcion-producto"><br>          
                            <p id="precio-producto"><br>--> 
-                           <a href="gracias.html"><button type="submit">Comprar</button></a>
+                           <button type="submit" @click="addToCart">Comprar</button></a>
+                           <p>RAM</p>
+                           <ul>
+                               <li @click="cambiarPrecio(variedad.precio)" v-for="variedad in variedadNotebooks"><button>{{variedad.cantidadRam}}</button></li>                             
+                           </ul>
+
                            <p>
                                <a href="#">ver medios de pago</a> 
                            </p>
